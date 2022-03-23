@@ -1,13 +1,17 @@
 pragma solidity 0.8.13;
 
 contract MyContract { 
-    string public value = "Initial Value";
-    
-    function get() public view returns(string memory) { 
-        return value;
+    uint256 public peopleCount = 0;
+    mapping(uint => Person) public people;
+
+    struct Person {
+        uint _id;
+        string _firstName;
+        string _lastName;
     }
 
-    function set(string memory _value) public {
-        value = _value;
+    function addPerson(string memory _firstName, string memory _lastName) public {
+        peopleCount += 1;
+        people[peopleCount] = Person(peopleCount, _firstName, _lastName);
     }
 }

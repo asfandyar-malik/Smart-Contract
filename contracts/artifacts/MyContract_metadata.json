@@ -6,17 +6,46 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
-				"stateMutability": "nonpayable",
-				"type": "constructor"
-			},
-			{
-				"inputs": [],
-				"name": "get",
-				"outputs": [
+				"inputs": [
 					{
 						"internalType": "string",
+						"name": "_firstName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_lastName",
+						"type": "string"
+					}
+				],
+				"name": "addPerson",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
 						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "people",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "_id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_firstName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_lastName",
 						"type": "string"
 					}
 				],
@@ -24,26 +53,13 @@
 				"type": "function"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "string",
-						"name": "_value",
-						"type": "string"
-					}
-				],
-				"name": "set",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
 				"inputs": [],
-				"name": "value",
+				"name": "peopleCount",
 				"outputs": [
 					{
-						"internalType": "string",
+						"internalType": "uint256",
 						"name": "",
-						"type": "string"
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -78,10 +94,10 @@
 	},
 	"sources": {
 		"contracts/MyContract.sol": {
-			"keccak256": "0x59966dd446d4bef946394d8b7c59d10285442f65250866e672e664215e4b75a7",
+			"keccak256": "0x5344dc4dac0a99118aadd86cdf68659091d0df3e55ac6b2139f420ceb45d349b",
 			"urls": [
-				"bzz-raw://16b66b48880fe845a3f608135cf0aa1383309d4eb632dcb1db26e8e677ff31e5",
-				"dweb:/ipfs/QmYHvotim9vrLHkL7bwn8ZVwP1pie1kpBo6nQnJynWaxvi"
+				"bzz-raw://3871385a171670a8893bcc93c11de21328f6f2ee72c7cbd980490c268874a76d",
+				"dweb:/ipfs/QmSn75rRWHUi7C3gDEBsNn2NcL1CFZLhzV4jxnh1cVcGEv"
 			]
 		}
 	},
