@@ -20,3 +20,5 @@ Output from script will appear in remix terminal.
 msg: metadata thats passed in to contract. 
 
 block.timestamp: find current timestamp
+
+tx.origin

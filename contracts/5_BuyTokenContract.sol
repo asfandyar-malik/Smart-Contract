@@ -1,28 +1,36 @@
-pragma solidity 0.8.13;
+pragma solidity 0.5.1;
 
-contract BuyTokenContract { 
+contract ERC20Token {
+    string public name;
+    mapping(address => uint256) public balances;
 
-   mapping(address => uint256) public balances;
-   address payable wallet;
+    constructor(string memory _name) public {
+        name = _name;
+    }
 
-   event Purchase(
-      address _buyer,
-      uint256 _amount
-   );
+    function mint() public {
+        balances[tx.origin] ++;
+    }
+}
 
-   constructor(address payable _wallet) public { 
-      wallet = _wallet;
-   }
+contract MyToken is ERC20Token {
+    string public symbol;
+    address[] public owners;
+    uint256 public ownerCount;
 
-   fallback() external payable {
-      buyToken();
-   }
+    constructor(
+        string memory _name,
+        string memory _symbol
+    )
+    ERC20Token(_name)
+    public {
+        symbol = _symbol;
+    }
 
-   function buyToken() public payable {
-      // buy a token
-      balances[msg.sender] += 1;
-      // send ether to a wallet
-      wallet.transfer(msg.value);
-      emit Purchase(msg.sender, 1); 
-   }
+    function mint() public {
+        super.mint();
+        ownerCount ++;
+        owners.push(msg.sender);
+    }
+
 }
