@@ -1,6 +1,6 @@
-REMIX EXAMPLE PROJECT
+REMIX Ethereum Contract
 
-Remix example project is present when Remix loads for the very first time or there are no files existing in the File Explorer. 
+
 It contains 3 directories:
 
 1. 'contracts': Holds three contracts with different complexity level, denoted with number prefix in file name.
@@ -16,3 +16,7 @@ Scripts have full access to the web3.js and ethers.js libraries.
 To run a script, right click on file name in the file explorer and click 'Run'. Remember, Solidity file must already be compiled.
 
 Output from script will appear in remix terminal.
+
+msg: metadata thats passed in to contract. 
+
+block.timestamp: find current timestamp
